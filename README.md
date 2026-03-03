@@ -2,6 +2,8 @@
 ![DuckDB](https://img.shields.io/badge/DuckDB-FCC624?style=for-the-badge)
 ![Power BI](https://img.shields.io/badge/PowerBI-F2C811?style=for-the-badge&logo=powerbi&logoColor=black)
 ![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
+
+
 🚀 Kaggle Analytics Engineering Project
 dbt + DuckDB + Power BI (Zero Cloud, Fully Reproducible)
 
