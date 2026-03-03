@@ -1,4 +1,3 @@
-![dbt CI](https://github.com/karthic180/kaggle-dbt-powerbi/actions/workflows/dbt-ci.yml/badge.svg)
 ![dbt](https://img.shields.io/badge/dbt-FF694B?style=for-the-badge&logo=dbt&logoColor=white)
 ![DuckDB](https://img.shields.io/badge/DuckDB-FCC624?style=for-the-badge)
 ![Power BI](https://img.shields.io/badge/PowerBI-F2C811?style=for-the-badge&logo=powerbi&logoColor=black)
