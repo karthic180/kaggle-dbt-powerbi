@@ -1,0 +1,10 @@
+version: "3.9"
+
+services:
+  kaggle_dbt:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+    volumes:
+      - .:/app
+    container_name: kaggle_dbt_project

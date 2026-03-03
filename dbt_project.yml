@@ -1,0 +1,3 @@
+name: kaggle_dbt_powerbi
+version: 1.0
+profile: analytics_profile

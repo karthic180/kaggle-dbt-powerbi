@@ -1,0 +1,11 @@
+# Virtual environment
+venv/
+
+# dbt build artifacts
+target/
+logs/
+
+
+# OS files
+.DS_Store
+Thumbs.db

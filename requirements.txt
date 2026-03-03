@@ -1,0 +1,4 @@
+dbt-duckdb
+dbt-sqlite
+duckdb
+pandas
