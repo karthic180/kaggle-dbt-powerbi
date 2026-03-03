@@ -1,46 +1,139 @@
-## 🚀 Quick Start (No Install Required)
+🚀 Kaggle Analytics Engineering Project
+dbt + DuckDB + Power BI (Zero Cloud, Fully Reproducible)
 
-### Option 1 — Docker (Recommended)
+This project demonstrates a complete modern analytics engineering workflow using:
 
-```bash
+🧱 dbt
+
+🦆 DuckDB
+
+📊 Microsoft Power BI Desktop
+
+🐳 Docker (optional)
+
+
+📌 Project Overview
+
+This project uses the Brazilian e-commerce dataset from Kaggle to:
+
+Load raw CSV data
+
+Transform data using dbt
+
+Create fact and dimension models
+
+Implement data tests
+
+Build SCD Type 2 snapshot
+
+Export analytics-ready tables
+
+Visualize results in Power BI
+
+🏗 Architecture
+Kaggle CSV
+    ↓
+DuckDB
+    ↓
+dbt (staging → marts)
+    ↓
+Snapshots + Tests
+    ↓
+CSV Export
+    ↓
+Power BI Dashboard
+
+📊 Data Source
+
+Dataset: Brazilian E-Commerce Public Dataset
+
+Download from:
+
+https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce
+
+After downloading:
+
+Place CSV files inside:
+
+data/
+
+(These files are not committed to keep repo lightweight.)
+
+🚀 Quick Start
+Option 1 — Docker (No Python Required)
+
+Install:
+
+Docker
+
+Run:
+
 docker compose up
 Option 2 — Windows
 .\scripts\bootstrap.ps1
-Option 3 — Mac/Linux
+Option 3 — Mac / Linux
+chmod +x scripts/bootstrap.sh
 ./scripts/bootstrap.sh
+🧱 dbt Features Included
 
-After completion:
+Staging models
 
-Open Power BI Desktop
-Import CSV from powerbi/data
-### Running dbt Manually
+Fact table (fct_orders)
 
-After activating venv:
+Dimension table (dim_customers)
+
+Data tests (unique, not_null)
+
+Snapshot (SCD Type 2)
+
+DuckDB primary engine
+
+SQLite fallback
+
+Run manually:
 
 dbt run --target duckdb
 dbt test --target duckdb
 dbt snapshot --target duckdb
-## Requirements (Non-Docker Mode)
+📊 Power BI Setup
 
-Python 3.10+
+Open:
 
-dbt-duckdb
+Microsoft Power BI Desktop
 
-duckdb
+Import CSV from:
 
-pandas
+powerbi/data/
 
-All installed automatically via bootstrap.
-## Database Engines
+Create relationship:
 
-This project supports:
+dim_customers.customer_id → fct_orders.customer_id
 
-Engine	Purpose
-DuckDB	Primary analytics engine
-SQLite	Fallback engine
+Example DAX:
+
+Total Revenue = SUM(fct_orders[total_price])
+Total Orders = DISTINCTCOUNT(fct_orders[order_id])
+Average Order Value = DIVIDE([Total Revenue], [Total Orders])
+🎯 What This Project Demonstrates
+
+Analytics engineering best practices
+
+ELT architecture
+
+Star schema modeling
+
+Data quality testing
+
+Snapshot versioning
+
+Reproducible pipelines
+
+Cross-platform automation
+
+BI integration
 
 
-License
+
+📄 License
 
 MIT License
-See LICENSE file.
