@@ -9,3 +9,14 @@ logs/
 # OS files
 .DS_Store
 Thumbs.db
+
+# Large raw data
+data/
+
+# Local databases
+project.db
+project.duckdb
+
+# dbt build artifacts
+target/
+logs/
